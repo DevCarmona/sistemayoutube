@@ -19,4 +19,9 @@ class Home extends CI_Controller {
 		redirect('login');
 	}
 
+	function dashboard()
+	{
+		
+	}
+
 }

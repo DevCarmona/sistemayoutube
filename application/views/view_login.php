@@ -31,13 +31,17 @@
       </div><!-- /.login-logo -->
       <div class="login-box-body">
         <p class="login-box-msg">Entre para iniciar sua sessão</p>
-        <form action="../../index2.html" method="post">
+
+        <?php
+          echo form_open('autentica');
+          echo validation_errors();
+        ?>
           <div class="form-group has-feedback">
-            <input type="email" class="form-control" placeholder="E-mail">
+            <input type="email" id="login" name="login" class="form-control" placeholder="E-mail ou Usuário">
             <span class="glyphicon glyphicon-envelope form-control-feedback"></span>
           </div>
           <div class="form-group has-feedback">
-            <input type="password" id="password" class="form-control" placeholder="Senha">
+            <input type="password" id="password" name="password" class="form-control" placeholder="Senha">
             <span class="glyphicon glyphicon-lock form-control-feedback"></span>
           </div>
           <div class="row">
@@ -52,7 +56,7 @@
               <button type="submit" class="btn btn-primary btn-block btn-flat">Entrar</button>
             </div><!-- /.col -->
           </div>
-        </form>
+        echo form_close();
 
         <a href="#">Esqueci minha senha</a><br>
         <!-- <a href="register.html" class="text-center">Quero me cadastrar</a> -->
