@@ -37,10 +37,11 @@
           echo validation_errors();
         ?>
           <div class="form-group has-feedback">
-            <input type="email" id="login" name="login" class="form-control" placeholder="E-mail ou Usuário">
+            <input type="text" id="login" name="login" value="<?php echo set_value('login') ;?>" class="form-control" placeholder="E-mail ou Usuário">
             <span class="glyphicon glyphicon-envelope form-control-feedback"></span>
           </div>
           <div class="form-group has-feedback">
+            <?php echo form_error('password');?>
             <input type="password" id="password" name="password" class="form-control" placeholder="Senha">
             <span class="glyphicon glyphicon-lock form-control-feedback"></span>
           </div>

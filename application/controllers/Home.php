@@ -21,7 +21,6 @@ class Home extends CI_Controller {
 
 	function dashboard()
 	{
-		
+		$this->load->view('view_home');
 	}
-
 }

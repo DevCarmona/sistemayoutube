@@ -9,12 +9,14 @@ class Model_usuario extends CI_Model {
     {
         $this->db->select('
             id, 
-            nome
+            nome,
+            login,
+            email
         ');
         $this->db->from('usuarios');
-        $this->db->where('email', $login);
+        $this->db->where('login', $login);
         $this->db->where('senha', $senha);
-        $this->db->where('status', '1');
+        //$this->db->where('status', '1');
         $this->db->limit(1);
         $query = $this->db->get();
 
