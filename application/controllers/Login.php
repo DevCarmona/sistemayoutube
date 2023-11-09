@@ -12,7 +12,11 @@ class Login extends CI_Controller {
     }
     
     public function index() {
-        $this->load->helper(array('form'));
-        $this->load->view('view_login');
+        if($this->session->userdata('logged_in')) {
+            $this->load->view('view_home');
+        } else {
+            $this->load->helper(array('form'));
+            $this->load->view('view_login');
+        }
     }
 }

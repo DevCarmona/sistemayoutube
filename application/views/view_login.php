@@ -37,12 +37,12 @@
           echo validation_errors();
         ?>
           <div class="form-group has-feedback">
-            <input type="text" id="login" name="login" value="<?php echo set_value('login') ;?>" class="form-control" placeholder="E-mail ou Usuário">
+            <input type="text" id="login" name="login" value="<?php echo set_value('login');?>" class="form-control" placeholder="E-mail ou Usuário">
             <span class="glyphicon glyphicon-envelope form-control-feedback"></span>
           </div>
           <div class="form-group has-feedback">
-            <?php echo form_error('password');?>
-            <input type="password" id="password" name="password" class="form-control" placeholder="Senha">
+            <?php echo form_error('senha');?>
+            <input type="password" id="senha" name="senha" value="<?php echo set_value('senha');?>" class="form-control" placeholder="Senha">
             <span class="glyphicon glyphicon-lock form-control-feedback"></span>
           </div>
           <div class="row">
@@ -57,7 +57,6 @@
               <button type="submit" class="btn btn-primary btn-block btn-flat">Entrar</button>
             </div><!-- /.col -->
           </div>
-        echo form_close();
 
         <a href="#">Esqueci minha senha</a><br>
         <!-- <a href="register.html" class="text-center">Quero me cadastrar</a> -->

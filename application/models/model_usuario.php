@@ -16,7 +16,7 @@ class Model_usuario extends CI_Model {
         $this->db->from('usuarios');
         $this->db->where('login', $login);
         $this->db->where('senha', $senha);
-        //$this->db->where('status', '1');
+        // $this->db->where('status', '1');
         $this->db->limit(1);
         $query = $this->db->get();
 

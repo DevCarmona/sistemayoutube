@@ -3,7 +3,7 @@
   <head>
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <title>AdminLTE 2 | Dashboard</title>
+    <title>Painel de Controle</title>
     <!-- Tell the browser to be responsive to screen width -->
     <meta content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no" name="viewport">
     <!-- Bootstrap 3.3.5 -->
@@ -29,12 +29,19 @@
   </head>
   <body class="hold-transition skin-blue sidebar-mini">
 
+    <?php
+        $this->load->view('template/header');
+        $this->load->view('template/topbar');
+        $this->load->view('template/sidebar');
+        $this->load->view('template/configbar');
+       // if($tela!='') {
+            $this->load->view('telas/'.$tela);
+       // }
+        $this->load->view('template/js');
+        $this->load->view('template/footer');
 
+    ?>
 
-
-
-
-     
     <!-- jQuery 2.1.4 -->
     <script src="plugins/jQuery/jQuery-2.1.4.min.js"></script>
     <!-- Bootstrap 3.3.5 -->
